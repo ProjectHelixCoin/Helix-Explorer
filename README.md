@@ -1,14 +1,7 @@
-Ciquidus Alpha - 1.7.1
+iquidus Alpha - 1.7.1
 ================
 
-The Chaincoin block explorer.
-
-This project is a fork of [Iquidus Explorer](https://github.com/iquidus/explorer) so massive thanks go out to Luke Williams for his code! Thank you!!!
-
-### See it in action
-
-*  [explorer.chaincoin.org](https://explorer.chaincoin.org)
-
+The Helix block explorer.
 
 ### Requires
 
