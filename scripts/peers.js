@@ -24,9 +24,12 @@ mongoose.connect(dbString, function(err) {
     exit();
   } else {
     request({uri: 'http://127.0.0.1:' + settings.port + '/api/getpeerinfo', json: true}, function (error, response, body) {
+      var livepeers = [];
       lib.syncLoop(body.length, function (loop) {
         var i = loop.iteration();
         var address = body[i].addr.split(':')[0];
+        livepeers[i] = address;
+		db.delete_peer(address);
         db.find_peer(address, function(peer) {
           if (peer) {
             // peer already exists
@@ -44,9 +47,20 @@ mongoose.connect(dbString, function(err) {
             });
           }
         });
-      }, function() {
-        exit();
+      },function(){
+        db.get_peers(function(peers){
+			for( var i = 0; i < peers.length; i++){
+				if(!livepeers.includes(peers[i].address)){
+				  console.log("Address doesnt exist: ", peers[i].address);
+				  db.delete_peer(peers[i].address);
+				}else{
+					console.log("Address exists: ", peers[i].address);
+				}
+            }
+		  console.log('done');
+		  exit();
+        });
       });
     });
-  }
+  };
 });
