@@ -1,17 +1,17 @@
-![Bulwark Logo](https://bulwarkcrypto.com/wp-content/uploads/2018/04/blockexplorer.svg)
+![Helix Logo](https://helix-crypto.com/images/helix-logo.svg)
 
-Bulwark Explorer
+Helix Explorer
 &middot;
-[![GitHub license](https://img.shields.io/github/license/bulwark-crypto/bulwark-explorer.svg)](https://github.com/bulwark-crypto/bulwark-explorer/blob/master/COPYING) [![Build Status](https://travis-ci.org/bulwark-crypto/bulwark-explorer.svg?branch=master)](https://travis-ci.org/bulwark-crypto/bulwark-explorer) [![Discord](https://img.shields.io/discord/374271866308919296.svg)](https://discord.me/bulwarkcrypto) [![GitHub version](https://badge.fury.io/gh/bulwark-crypto%2Fbulwark-explorer.svg)](https://badge.fury.io/gh/bulwark-crypto%2Fbulwark-explorer)
+[![GitHub license](https://img.shields.io/github/license/ProjectHelixCoin/Helix-explorer.svg)](https://github.com/ProjectHelixCoin/Helix-explorer/blob/master/COPYING) [![Build Status](https://travis-ci.org/ProjectHelixCoin/Helix-explorer.svg?branch=master)](https://travis-ci.org/ProjectHelixCoin/Helix-explorer) [![Discord](https://img.shields.io/discord/431352032444547073.svg)](https://discord.gg/dVgcEka) [![GitHub version](https://badge.fury.io/gh/ProjectHelixCoin%2FHelix-explorer.svg)](https://badge.fury.io/gh/ProjectHelixCoin%2FHelix-explorer)
 =====
 
 The most advanced blockchain eplorer for masternode, proof-of-stake and proof-of-work chains.
 
 Features:
 
-- Address-to-address blockchain data storage powered by Bulwark Carver2D Rev3 algorithm
+- Address-to-address blockchain data storage powered by Helix Carver2D Rev3 algorithm
 - World's most advanced Proof Of Stake calculator based on real blockchain rewards data
-- Running address balance powered by Bulwark's "Perfect Ledger" technology
+- Running address balance powered by Helix's "Perfect Ledger" technology
 - Per-block POS, POW, MN rewards breakdown
 - Detailed per-address rewards breakdown and rewards summary
 - Automatic chain rewinding
@@ -25,13 +25,13 @@ Features:
 4. `usermod -aG sudo explorer`
 5. Ensure your coin RPC is running
 6. `su explorer`
-7. `bash <( curl https://raw.githubusercontent.com/bulwark-crypto/bulwark-explorer/master/script/install.sh )`
+7. `bash <( curl https://raw.githubusercontent.com/ProjectHelixCoin/Helix-explorer/master/script/install.sh )`
 
 ## Post-Installation
 
 Check block syncing status with `tail -f /home/explorer/blockex/tmp/block.log` 
 
-You will most likely see `Error: connect ECONNREFUSED` this is because your RPC username/password/port do not match your coin. Please check your coin `.config` file (ex: `/home/explorer/.bulwark/bulwark.conf`) 
+You will most likely see `Error: connect ECONNREFUSED` this is because your RPC username/password/port do not match your coin. Please check your coin `.config` file (ex: `/home/explorer/.helix/helix.conf`) 
 
 You will see something like this:
 ```
@@ -56,14 +56,14 @@ https://nodejs.org/en/download/package-manager/
 
 https://yarnpkg.com/lang/en/docs/install/
 
-It is also required to have the Bulwark daemon running in the background. It is recommended to set this up before beginning to set up the explorer so that it syncs by the time you need it.
+It is also required to have the Helix daemon running in the background. It is recommended to set this up before beginning to set up the explorer so that it syncs by the time you need it.
 
-Our geniuses here at BulwarkCorp™ have put together a script to Install Bulwark daemon. Just run `bash script/bulwarkd_setup.sh`
+Our geniuses here at Dataloft™ have put together a script to Install Helix daemon. Just run `bash script/helixd_setup.sh`
 
-This will install the latest Bulwark wallet and create a rpc username/password before starting the daemon.
+This will install the latest Helix wallet and create a rpc username/password before starting the daemon.
 
 ## Manual Install
-`git clone https://github.com/bulwark-crypto/bulwark-explorer.git` - copy repo to local folder.
+`git clone https://github.com/ProjectHelixCoin/Helix-explorer.git` - copy repo to local folder.
 
 `cd blockex` - change into project directory.
 
