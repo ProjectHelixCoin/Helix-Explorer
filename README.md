@@ -35,7 +35,7 @@ You will most likely see `Error: connect ECONNREFUSED` this is because your RPC 
 
 You will see something like this:
 ```
-rpcport=52541
+rpcport=37415
 rpcuser=someuserhere
 rpcpassword=somepasswordhere
 daemon=1

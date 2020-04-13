@@ -144,7 +144,7 @@ const secretsConfig = {
   },
   rpc: {
     host: '127.0.0.1',
-    port: '52541',
+    port: '37415',
     user: 'helixrpc',
     pass: 'someverysafepassword',
     timeout: 8000, // 8 seconds
