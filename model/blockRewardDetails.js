@@ -45,7 +45,7 @@ const BlockRewardDetailsMasternode = new mongoose.Schema({
   addressLabel: { index: true, required: true, type: String },
   carverAddress: { index: true, type: mongoose.Schema.Types.ObjectId, ref: 'CarverAddress' },
   reward: { required: true, type: Number },
-  roi: { required: true, type: Number },
+  roi: { required: false, type: Number },
   ageBlocks: { required: true, type: Number },
   ageTime: { required: true, type: Number },
 }, { _id: false, versionKey: false });
