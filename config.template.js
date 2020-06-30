@@ -26,7 +26,7 @@ const config = {
     coinNumberFormat: '0,0.0000',
     coinTooltipNumberFormat: '0,0.0000000000', // Hovering over a number will show a larger percision tooltip
     websiteUrl: 'https://helix-crypto.com/',
-    masternodeCollateral: 5000, // MN ROI% gets based on this number. If your coin has multi-tiered masternodes then set this to lowest tier (ROI% will simply be higher for bigger tiers)
+    masternodeCollateral: 10000, // MN ROI% gets based on this number. If your coin has multi-tiered masternodes then set this to lowest tier (ROI% will simply be higher for bigger tiers)
   },
   offChainSignOn: {
     enabled: true,

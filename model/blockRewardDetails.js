@@ -2,8 +2,8 @@
 const mongoose = require('mongoose');
 
 /*
-  Nesting is as follows: 
-  
+  Nesting is as follows:
+
   BlockRewardDetails
   ->BlockRewardDetailsMasternode
   ->BlockRewardDetailsStake
@@ -74,19 +74,19 @@ const blockRewardDetailsSchema = new mongoose.Schema({
   masternode: { type: BlockRewardDetailsMasternode },
   proofOfWork: { type: BlockRewardDetailsProofOfWork },
 
-  hasStakeReward: { required: true, type: Boolean },
-  hasMasternodeReward: { required: true, type: Boolean },
-  hasPoofOfWorkReward: { required: true, type: Boolean },
+  hasStakeReward: { required: false, type: Boolean },
+  hasMasternodeReward: { required: false, type: Boolean },
+  hasPoofOfWorkReward: { required: false, type: Boolean },
 }, { versionKey: false });
 
-blockRewardDetailsSchema.index({ hasStakeReward: 1, blockHeight: 1 }, { partialFilterExpression: { hasStakeReward: true } });
-blockRewardDetailsSchema.index({ hasMasternodeReward: 1, blockHeight: 1 }, { partialFilterExpression: { hasMasternodeReward: true } });
-blockRewardDetailsSchema.index({ hasPoofOfWorkReward: 1, blockHeight: 1 }, { partialFilterExpression: { hasPoofOfWorkReward: true } });
+blockRewardDetailsSchema.index({ hasStakeReward: 1, blockHeight: 201 }, { partialFilterExpression: { hasStakeReward: true } });
+blockRewardDetailsSchema.index({ hasMasternodeReward: 1, blockHeight: 90201 }, { partialFilterExpression: { hasMasternodeReward: true } });
+blockRewardDetailsSchema.index({ hasPoofOfWorkReward: 1, blockHeight: 90201 }, { partialFilterExpression: { hasPoofOfWorkReward: true } });
 
 /**
  * Block Reward Details
  *
- * 
+ *
  */
 const BlockRewardDetails = mongoose.model('BlockRewardDetails', blockRewardDetailsSchema, 'blockRewardDetails');
 

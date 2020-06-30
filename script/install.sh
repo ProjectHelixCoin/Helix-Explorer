@@ -83,7 +83,7 @@ installMongo () {
     sudo chown -R mongodb:mongodb /data/db
     sudo systemctl start mongod
     sudo systemctl enable mongod
-    mongo blockex --eval "db.createUser( { user: \"$rpcuser\", pwd: \"$rpcpassword\", roles: [ \"readWrite\" ] } )"
+    mongo blockex --eval "db.createUser( { user: \"blockexuser\", pwd: \"Explorer!1\", roles: [ \"readWrite\" ] } )"
     clear
 }
 
