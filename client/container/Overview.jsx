@@ -65,7 +65,7 @@ class Overview extends Component {
         ),
         countOut: (
           <Link to={`/tx/${tx.txId}`}>
-            {tx.addressesOut}
+            {tx.addressesOut ? 0 : tx.addressesOut}
           </Link>
         ),
         date: (
