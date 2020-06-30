@@ -33,7 +33,7 @@ const BlockRewardDetailsStake = new mongoose.Schema({
   reward: { required: true, type: Number },
   input: { required: true, type: BlockRewardDetailsStakeInput },
   carverAddress: { index: true, type: mongoose.Schema.Types.ObjectId, ref: 'CarverAddress' },
-  roi: { index: true, required: true, type: Number },
+  roi: { index: true, required: false, type: Number },
   ageBlocks: { required: true, type: Number },
   ageTime: { required: true, type: Number },
 }, { _id: false, versionKey: false });
