@@ -49,5 +49,5 @@ else {
   });
 
   // Export for testing.
-  module.exports =  app.listen(3000);
+  module.exports =  app;
 }
